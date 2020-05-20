@@ -1,0 +1,48 @@
+/* deleted Compose Tweet h2  */
+section h2{
+  display: none;
+}
+
+section.new-tweet{
+  width: 100%;
+  margin: 1em 0em 1em 0em;
+}
+/* What are you humming about? text */
+form label {
+  width: 100%;
+}
+/* typing area  */
+form textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  width: 100%;
+  background-color: #f4f1ec;
+  border-width: 0 0 5px 0;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-family: 'Bungee', sans-serif;
+}
+/* send tweet button  */
+form div button {
+  color: #ffffff;
+  background-color: #4056A1;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  margin-top: 1.5em;
+}
+
+/* text counter */
+form div output {
+  margin-top: 1.5em;
+}
+
+output.error{
+  color: red;
+}

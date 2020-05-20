@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  font-size: 0.8em;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Write a new tweet text  */
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* icon arrow down */
+nav div i {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+/* tweeter text logo  */
+nav span {
+  font-size: 24px;
+  font-family: 'Bungee', sans-serif;
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+
+
