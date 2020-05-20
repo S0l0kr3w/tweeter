@@ -6,8 +6,13 @@ $(document).ready(function() {
                         .find(".counter");
     textCounter.val(counter);
     // add/remove class for counter's CSS 
-    counter < 0 ? textCounter.addClass("error"):
-                  textCounter.removeClass("error");
+
+    if (counter < 0 ) {
+      textCounter.addClass("error");
+      alert(`Limit of 140 characters per tweet!`)
+    } else {
+      textCounter.removeClass("error");
+    }
   });
 
 });
