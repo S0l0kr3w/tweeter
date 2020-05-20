@@ -10,8 +10,10 @@ $(document).ready(function() {
     if (counter < 0 ) {
       textCounter.addClass("error");
       alert(`Limit of 140 characters per tweet!`)
+      $("#submit-button").prop('disabled', true);
     } else {
       textCounter.removeClass("error");
+      $("#submit-button").prop('disabled', false);
     }
   });
 

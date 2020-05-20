@@ -23,7 +23,6 @@ $(document).ready(function() {
       url
     })
       .done(function(result) {
-        console.log(result);
         renderTweets(result)
       })
       .fail(function() {
@@ -39,13 +38,16 @@ $(document).ready(function() {
     const tweetText = $(this)
       .closest(".new-tweet")
       .find("#tweet-text");
-    console.log(tweetText);
+
     const content = tweetText.serialize();
+    if (content.length > 5) {
     $.ajax("/tweets", { method: 'POST', data: content })
     .then(function (data) {
       console.log(data);
     })
-   
+    } else {
+      alert(`No tweet heard!`);
+    }
   });
 
   createTweetElement = (tweetObject) => {
