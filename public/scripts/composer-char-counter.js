@@ -15,6 +15,7 @@ $(document).ready(function() {
       textCounter.removeClass("error");
       $("#submit-button").prop('disabled', false);
     }
+  
   });
 
 });
