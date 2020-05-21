@@ -17,8 +17,8 @@ form textarea {
   flex-direction: column;
   align-items: center;
   color: #000000;
-  font-size: 0.8em;
-  margin-top: 0.5em;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
   width: 100%;
   background-color: #f4f1ec;
   border-width: 0 0 5px 0;
@@ -27,8 +27,34 @@ form textarea {
 form div {
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: 'Bungee', sans-serif;
+}
+
+.alert-length {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-style: solid;
+  border-color: red;
+  border-width: 0.5rem;
+  color: red;
+}
+
+.alert-empty {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-style: solid;
+  border-color: red;
+  border-width: 0.5rem;
+  color: red;
 }
 /* send tweet button  */
 form div button {
