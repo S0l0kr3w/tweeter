@@ -50,7 +50,7 @@ $(document).ready(function() {
       $(".counter").val("140");    
     })
     } else {
-      alert(`No tweet heard!`);
+      $(".alert-empty").slideDown("slow"); 
     }
   });
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
     const $time = $("<span>")
       .addClass("time")
-      .text(tweetObject.created_at)
+      .text(moment(tweetObject.created_at).fromNow())
       .appendTo($footer);
     
     const $retweenIcon = $("<i>")
