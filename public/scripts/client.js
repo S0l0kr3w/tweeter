@@ -52,8 +52,6 @@ $(document).ready(function() {
     } else {
       alert(`No tweet heard!`);
     }
-
-
   });
 
   createTweetElement = (tweetObject) => {
