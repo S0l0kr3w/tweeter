@@ -1,5 +1,10 @@
 $(document).ready(function() {
-  $("#tweet-text").on("keypress", function(event) {
+  // alert code hidden
+  $(".alert-length").hide();
+  $(".alert-empty").hide();
+  
+  $("#tweet-text").on("keyup", function(event) {
+    $(".alert-empty").slideUp("slow");
     const counter = 140 - this.value.length;
     const textCounter = $(this)
                         .closest(".new-tweet")
@@ -9,9 +14,12 @@ $(document).ready(function() {
 
     if (counter < 0 ) {
       textCounter.addClass("error");
-      alert(`Limit of 140 characters per tweet!`)
+      $(".alert-length").slideDown("slow"); 
+      // $("#alert").slideDown("slow");
+      // alert(`Limit of 140 characters per tweet!`)
       $("#submit-button").prop('disabled', true);
     } else {
+      $(".alert-length").slideUp("slow");
       textCounter.removeClass("error");
       $("#submit-button").prop('disabled', false);
     }
