@@ -20,11 +20,23 @@ nav div {
   align-items: center;
 }
 /* icon arrow down */
+
 nav div i {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: red;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.bounce-1 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
 }
 /* tweeter text logo  */
 nav span {
