@@ -6,14 +6,6 @@
 
 $(document).ready(function() {
 
-  renderTweets = (tweets) => {
-    // loops through tweets
-    $.each(tweets, function(index, tweetObject) {
-    // calls createTweetElement for each tweet
-      $(".tweets").prepend(createTweetElement(tweetObject))
-    });
-  };
-  
   requestPosts = (method, url) => {
     console.log(method, url);
     $.ajax({
@@ -30,6 +22,16 @@ $(document).ready(function() {
         console.log(`Request completed`)
       });
   };
+  // tweets rendered and appended to new tweets section
+  renderTweets = (tweets) => {
+    $(".tweets").empty();
+    // loops through tweets
+    $.each(tweets, function(index, tweetObject) {
+    // calls createTweetElement for each tweet
+      $(".tweets").prepend(createTweetElement(tweetObject))
+    });
+  };
+
   //event listener on submit
   $(".new-tweet").on("submit", function(event) {
     event.preventDefault();
@@ -43,7 +45,7 @@ $(document).ready(function() {
       .then(function (data) {
       console.log(data);
       // refresh page without reloading
-      requestPosts("GET", "http://localhost:8080/tweets");
+      requestPosts("GET", "/tweets");
       //empties text box upon submission
       $tweetText.val("");
       //resets counter to 140
@@ -53,11 +55,11 @@ $(document).ready(function() {
       $(".alert-empty").slideDown("slow"); 
     }
   });
-
+  
   createTweetElement = (tweetObject) => {
 
     const $article = $("<article>");
-    const $header = $("<header>")
+    const $header = $("<header>");
       
     const $avatar = $("<img>")
       .addClass("avatar")
@@ -76,7 +78,7 @@ $(document).ready(function() {
 
     const $content = $("<p>")
       .addClass("content")
-      .text(tweetObject.content.text)
+      .text(tweetObject.content.text);
     
     const $footer = $("<footer>")
 
@@ -105,7 +107,5 @@ $(document).ready(function() {
   
     return $article;
   };
-
-  requestPosts("GET", "http://localhost:8080/tweets");
 
 });
