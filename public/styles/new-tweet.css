@@ -1,10 +1,9 @@
-/* deleted Compose Tweet h2  */
+/* hid Compose Tweet h2  */
 section h2{
   display: none;
 }
 
 section.new-tweet{
-  width: 100%;
   margin: 1em 0em 1em 0em;
 }
 /* What are you humming about? text */
@@ -17,7 +16,7 @@ form textarea {
   flex-direction: column;
   align-items: center;
   color: #000000;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   width: 100%;
   background-color: #f4f1ec;
@@ -68,7 +67,17 @@ form div button {
 form div output {
   margin-top: 1.5em;
 }
-
+/* text counter change color */
 output.error{
   color: red;
+}
+
+@media (min-width: 800px) {
+  .alert-length {
+    margin-top: 0rem;
+  }
+
+  .alert-empty {
+    margin-top: 0rem;
+  }
 }

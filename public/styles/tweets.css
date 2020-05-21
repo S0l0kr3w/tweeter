@@ -1,13 +1,14 @@
+/* tweets area  */
 section.tweets {
   width: 100%;
   background-color: #f4f1ec; 
 }
-
+/* avatar and username */
 section.tweets header {
   display: flex;
   align-items: center;
 }
-
+/* tweet box  */
 section.tweets article {
   width: 100%;
   flex-direction: row;
@@ -19,11 +20,11 @@ section.tweets article {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
+/* tweet box effect on hover  */
 section.tweets article:hover {
   box-shadow: 1rem 1rem #7F89DE;
 }
-
+/* handle effects on hover  */
 section.tweets article:hover span.handle{
   opacity: 0.5;
   color: #7F89DE;
@@ -35,33 +36,30 @@ section.tweets p.content {
 
 section.tweets footer{
   display: flex;
-  flex-direction: row;
-  align-items: center;
   font-size: 1rem;
   border-top: solid;
   padding-top: 0.5rem;
 }
 
-section.tweets p.time {
-  margin-right: auto;
-}
-
+/* icons  */
 section.tweets i {
   padding-left: 0.2rem;
   padding-right: 0.2rem;
 }
 
+/* header section username */
 span.username {
   display: flex;
   padding-left: 1rem;
   justify-content: flex-start;
 }
-
+/* header section handle*/
 span.handle {
   display: flex;
   margin-left: auto;
   opacity: 0;
 }
+/* footer section time*/
 span.time {
   margin-right: auto;
 }

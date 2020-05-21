@@ -1,11 +1,29 @@
-#profile-header {
+.profile-header {
   display: flex;
   height: 400px;
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #e38800;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  margin-top: 120px;
+}
+
+.big-avatar {
+  display: flex;
+}
+
+#big-name {
+  display: flex;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+@media (min-width: 800px) {
+  .profile-header  {
+    flex-shrink: 2;
+    margin-top: 8rem;
+    height: 25rem;
+    width: 25rem;
+    margin-left: 5%;
+  }
 }
