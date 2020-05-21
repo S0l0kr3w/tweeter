@@ -10,12 +10,10 @@ $(document).ready(function() {
     // loops through tweets
     $.each(tweets, function(index, tweetObject) {
     // calls createTweetElement for each tweet
-      $(".tweets").append(createTweetElement(tweetObject))//append to tweets?
-      // takes return value and appends it to the tweets container
+      $(".tweets").prepend(createTweetElement(tweetObject))
     });
   };
   
-  //
   requestPosts = (method, url) => {
     console.log(method, url);
     $.ajax({
@@ -35,19 +33,27 @@ $(document).ready(function() {
   //event listener on submit
   $(".new-tweet").on("submit", function(event) {
     event.preventDefault();
-    const tweetText = $(this)
+    const $tweetText = $(this)
       .closest(".new-tweet")
       .find("#tweet-text");
-
-    const content = tweetText.serialize();
+    
+    const content = $tweetText.serialize();
     if (content.length > 5) {
     $.ajax("/tweets", { method: 'POST', data: content })
-    .then(function (data) {
+      .then(function (data) {
       console.log(data);
+      // refresh page without reloading
+      requestPosts("GET", "http://localhost:8080/tweets");
+      //empties text box upon submission
+      $tweetText.val("");
+      //resets counter to 140
+      $(".counter").val("140");    
     })
     } else {
       alert(`No tweet heard!`);
     }
+
+
   });
 
   createTweetElement = (tweetObject) => {
