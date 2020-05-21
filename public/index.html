@@ -28,6 +28,9 @@
     <!-- Tweets CSS -->
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
+    <!-- Relative time  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc=" crossorigin="anonymous"></script>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -36,6 +39,7 @@
 
     <!-- Char counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -44,7 +48,7 @@
       <span>Tweeter</span>
         <div>
         <a>Write a new tweet</a>
-        <i class="fas fa-angle-double-down"></i>
+        <i class="fas fa-angle-double-down bounce-1"></i>
         </div>  
     </nav>
 
@@ -60,7 +64,20 @@
 
     <!-- Page-specific (main) content here -->
   <main class="container">
+    <!-- new tweet section start  -->
     <section class="new-tweet">
+      <!-- alert  -->
+      <div class="alert-length">
+        <i class="fas fa-exclamation-circle"></i>
+        <p>I tawt I taw a puddy tat type more than 140!</p>
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <div class="alert-empty">
+        <i class="far fa-frown"></i>
+        <p>Silent tweet-ment? What's up doc?</p>
+        <i class="far fa-frown"></i>
+      </div>
+      <!-- alert  -->
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
@@ -71,9 +88,9 @@
         </div>
       </form>
     </section>
+    <!-- new tweet section end  -->
     <!-- tweets section  start-->
-    <section class="tweets">
-      
+    <section class="tweets">  
     </section>
     <!-- tweets section  end-->
   </main>
