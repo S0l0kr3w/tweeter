@@ -103,9 +103,11 @@ $(document).ready(function() {
     $article.append($content);
     $article.append($footer);
 
-    console.log($article.html());
+    // console.log($article.html());
   
     return $article;
   };
+
+  requestPosts("GET", "/tweets");
 
 });

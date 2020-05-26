@@ -3,7 +3,7 @@ $(document).ready(function() {
   $(".alert-length").hide();
   $(".alert-empty").hide();
 
-  $("#tweet-text").on("keyup", function(event) {
+  $("#tweet-text").on("keydown", function(event) {
     $(".alert-empty").slideUp("slow");
     // char counter 
     const counter = 140 - this.value.length;

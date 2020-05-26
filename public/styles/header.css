@@ -20,7 +20,7 @@
 
 @media (min-width: 800px) {
   .profile-header  {
-    flex-shrink: 2;
+    flex-grow: 1;
     margin-top: 8rem;
     height: 25rem;
     width: 25rem;

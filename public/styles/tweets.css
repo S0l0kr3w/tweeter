@@ -1,5 +1,7 @@
 /* tweets area  */
 section.tweets {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: #f4f1ec; 
 }
@@ -11,8 +13,9 @@ section.tweets header {
 /* tweet box  */
 section.tweets article {
   width: 100%;
-  flex-direction: row;
-  align-items: center;
+  /* flex-grow: 3;
+  flex-direction: row; */
+  /* align-items: center; */
   padding: 1rem 1rem 1rem 1rem;
   border: 0.5rem;
   border-style: solid;
@@ -31,10 +34,11 @@ section.tweets article:hover span.handle{
 }
 
 section.tweets p.content {
+  overflow-wrap: anywhere;
   margin-bottom: 1rem;
 }
 
-section.tweets footer{
+section.tweets footer {
   display: flex;
   font-size: 1rem;
   border-top: solid;
@@ -62,6 +66,15 @@ span.handle {
 /* footer section time*/
 span.time {
   margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  section.tweets {
+    /* display: flex;
+    flex-direction: column; */
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+  }
 }
 
 
